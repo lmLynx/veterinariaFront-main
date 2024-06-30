@@ -1,0 +1,117 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">Agregar cita
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div class="container">
+        <form id="cita-form" [formGroup]="citaForm">
+
+            <div class="form-group row" *ngIf="mostrarUsuario">
+                <!-- Usuario -->
+                <div class="col-md-12">
+                    <label for="usuario">
+                        Usuario*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <select formControlName="usuario" style="width: 100%;" id="usuario" (change)="seleccionarUsuario($event)">
+                        <option *ngFor="let opcion of usuarios" [value]="opcion.id">{{ opcion.valor }}</option>
+                    </select>
+                    <div *ngIf="submitted && f['usuario'].errors" class="text-black">
+                        El usuario es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <!-- Mascota -->
+                <div class="col-md-12">
+                    <label for="mascota">
+                        Mascota*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <select formControlName="mascota" style="width: 100%;" id="mascota">
+                        <option *ngFor="let opcion of nombresMascotas" [value]="opcion.id">{{ opcion.valor }}</option>
+                    </select>
+                    <div *ngIf="submitted && f['mascota'].errors" class="text-black">
+                        La mascota es obligatoria.
+                    </div>
+                </div>
+            </div>
+
+            <!-- fecha cita -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="fecha">
+                        Fecha*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="date" id="fecha" name="fecha" formControlName="fecha">
+                    <div *ngIf="submitted && f['fecha'].errors" class="text-black">
+                        La fecha es obligatoria.
+                    </div>
+                </div>
+            </div>
+
+            <!-- hora cita -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="hora">
+                        Hora*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <select id="hora" formControlName="hora">
+                        <option *ngFor="let option of timeOptions" [value]="option">{{ option }}</option>
+                    </select>
+                    <div *ngIf="submitted && f['hora'].errors" class="text-black">
+                        La hora es obligatoria.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipo cita -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="tipoCita">
+                        Tipo cita*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <select formControlName="tipoCita" style="width: 100%;" id="tipoCita">
+                        <option *ngFor="let opcionCita of tiposCita" [value]="opcionCita">{{ opcionCita }}</option>
+                    </select>
+                    <div *ngIf="submitted && f['tipoCita'].errors" class="text-black">
+                        El tipo es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- observaciones -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="tipo">Observaciones
+                        <!-- <i class="fas fa-envelope"></i> -->
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <textarea id="observacion" name="observacion" formControlName="observaciones" style="width: 100%;">
+                    </textarea>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">
+            Cerrar
+        </button>
+        <div style="width: 20px;"></div>
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="crearCita()">Agendar
+        </button>
+    </div>
+
+</mat-dialog-content>

@@ -1,0 +1,96 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark">
+    <div class="row py-3 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-capitalize">
+                    <span class="text-primary">Virtual</span>
+                    <span class="text-white">Pet</span>
+                </h1>
+            </a>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+                <button (click)="volver()" class="btn btn-lg btn-primary px-3 d-none d-lg-block">
+                    Cerrar sesión
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<!-- Topbar End -->
+
+<!-- opciones -->
+
+<div class="container-fluid bg-light">
+
+    <div class="contenedor">
+        <div class="izquierda">
+            <div class="menu-lateral">
+                <!-- <div class="col-md-12 text-center">
+                    <img src="../../../assets/img/p.png" alt="Imagen de ejemplo" width="300">
+                </div> -->
+
+                <h1 style="text-align: center;">Panel principal</h1>
+
+                <ul>
+                    <li>
+                        <button (click)="mostrarCitas()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Citas
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarVacunas()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Vacunas
+                            <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarClientes()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Cientes
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarsistema()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Sistema
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                
+                    <!-- Agrega más opciones de menú según sea necesario -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="centro">
+        </div>
+        <div class="derecha">
+            <div class="margen-derecha">
+                
+                <div *ngIf="mostrarCitasB">
+                    <app-citas-control></app-citas-control>
+                </div>
+
+                <div *ngIf="mostrarVacunasB">
+                    <app-vacunas-control></app-vacunas-control>
+                </div>
+
+                <div *ngIf="mostrarUsuariosB">
+                    <app-usuarios-control></app-usuarios-control>
+                </div>
+
+                <div *ngIf="mostrarSistemaB">
+                    <app-sistema-control></app-sistema-control>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

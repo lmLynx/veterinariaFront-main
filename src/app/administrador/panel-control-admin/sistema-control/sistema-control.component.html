@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Gestion del sistema</h2>
+    <form [formGroup]="sistemaForm">
+        <div class="row">
+
+            <div class="col-md-12" style="margin-bottom: 5px;">
+                <label style="margin-right: 10px; font-size: x-large;" for="correo">Correo</label>
+                <input class="input-right-aligned" type="text" id="correo" name="correo" formControlName="correo"
+                    size="30" style="width: 60%;">
+
+            </div>
+            <div class="col-md-12" style="margin-bottom: 5px;">
+                <label style="margin-right: 10px; font-size: x-large;" for="telefono">Telefono</label>
+                <input class="input-right-aligned" type="text" id="telefono" name="telefono" formControlName="telefono"
+                    size="30" style="width: 60%;">
+
+            </div>
+            <div class="col-md-12" style="margin-bottom: 5px;">
+                <label style="margin-right: 10px; font-size: x-large;" for="horario">Horario</label>
+                <input class="input-right-aligned" type="text" id="horario" name="horario" formControlName="horario"
+                    size="30" style="width: 60%;">
+
+            </div>
+            <div class="col-md-12" style="margin-bottom: 5px;">
+                <label style="margin-right: 10px; font-size: x-large;" for="ubicacion">Ubicación</label>
+                <input class="input-right-aligned" type="text" id="ubicacion" name="ubicacion"
+                    formControlName="ubicacion" size="30" style="width: 60%;">
+
+            </div>
+            <div class="col-md-12" style="justify-content: center;">
+                <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                    (click)="editarInformacionActual()">Actualizar</button>
+            </div>
+
+        </div>
+    </form>
+</div>

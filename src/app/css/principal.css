@@ -1,0 +1,732 @@
+.bg-primary {
+  background-color: #ed6436 !important;
+}
+
+a.bg-primary:hover,
+a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #dc4614 !important;
+}
+
+.bg-light {
+  background-color: #f2f2f4 !important;
+}
+
+a.bg-light:hover,
+a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #d6d6dd !important;
+}
+
+.bg-dark {
+  background-color: #181818 !important;
+}
+
+a.bg-dark:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: black !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 1rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+}
+
+.px-0 {
+  padding-right: 0 !important;
+}
+
+.py-0 {
+  padding-bottom: 0 !important;
+}
+
+.px-0 {
+  padding-left: 0 !important;
+}
+
+.pt-2,
+.py-2 {
+  padding-top: 0.5rem !important;
+}
+
+.py-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+}
+
+.pr-3,
+.px-3 {
+  padding-right: 1rem !important;
+}
+
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem !important;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+}
+
+.px-4 {
+  padding-left: 1.5rem !important;
+}
+
+.pt-5,
+.py-5 {
+  padding-top: 3rem !important;
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+@media (min-width: 576px) {
+  .px-sm-3 {
+    padding-right: 1rem !important;
+  }
+
+  .px-sm-3 {
+    padding-left: 1rem !important;
+  }
+  .p-sm-5 {
+    padding: 3rem !important;
+  }
+
+  .px-sm-5 {
+    padding-right: 3rem !important;
+  }
+
+  .px-sm-5 {
+    padding-left: 3rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .px-md-5 {
+    padding-right: 3rem !important;
+  }
+
+  .px-md-5 {
+    padding-left: 3rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .py-lg-0 {
+    padding-top: 0 !important;
+  }
+  .pb-lg-0,
+  .py-lg-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .px-lg-5 {
+    padding-right: 3rem !important;
+  }
+
+  .px-lg-5 {
+    padding-left: 3rem !important;
+  }
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media (min-width: 992px) {
+  .text-lg-right {
+    text-align: right !important;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-black {
+  color: #050505 !important;
+}
+
+.text-primary {
+  color: #ed6436 !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #c53f12 !important;
+}
+
+.text-secondary {
+  color: #65c178 !important;
+}
+
+a.text-secondary:hover,
+a.text-secondary:focus {
+  color: #3e9b52 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #adb5bd;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  @page {
+    size: a3;
+  }
+  body {
+    min-width: 992px !important;
+  }
+  .container {
+    min-width: 992px !important;
+  }
+  .navbar {
+    display: none;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+}
+
+/********** Custom CSS ************/
+h1,
+h2 {
+  font-weight: 800 !important;
+}
+
+h3,
+h4 {
+  font-weight: 700 !important;
+}
+
+h5,
+h6 {
+  font-weight: 600 !important;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: inherit;
+  margin-left: 0;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 30px;
+  z-index: 11;
+  animation: action 1s infinite alternate;
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  padding: 30px 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #f2f2f4;
+  outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #181818;
+  background: #ed6436;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+}
+
+.html {
+  scroll-behavior: smooth !important;
+}
+
+.flaticon-house::before {
+  margin: 0; /* Anula cualquier margen que se aplique por defecto */
+  font-size: 2em; /* Ajusta el tamaño según tus necesidades */
+}
+
+.izquierda {
+  flex: 0 0 25%; /* Establecer el ancho del 30% sin que sea flexible */
+  background-color: #f0f0f0; /* Opcional: Agregar color de fondo */
+}
+
+.centro {
+  flex: 0 0 5%; /* Establecer el ancho del 30% sin que sea flexible */
+  background-color: #f0f0f0; /* Opcional: Agregar color de fondo */
+}
+
+.derecha {
+  flex: 0 0 70%; /* Establecer el ancho del 70% sin que sea flexible */
+  background-color: #e0e0e0; /* Opcional: Agregar color de fondo */
+}
+
+.margen-derecha {
+  margin-top: 10px; /* Margen superior de 20px */
+  margin-left: 10px; /* Margen izquierdo de 30px */
+}
+
+.contenedor {
+  display: flex; /* Utilizar Flexbox */
+}
+
+.menu-lateral ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.menu-lateral li {
+  /* border: 1px solid #ccc; Agrega un borde sólido de 1px con color gris claro */
+  margin: 5px 0; /* Agrega un margen superior e inferior para separar los elementos */
+  padding: 10px; /* Agrega relleno dentro de cada elemento */
+}
+
+.menu-lateral li a {
+  text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+  color: #333; /* Cambia el color del texto de los enlaces */
+  display: block; /* Hace que los enlaces ocupen todo el ancho del elemento li */
+}
+
+/* .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  } */
+
+/* Estilo de la tarjeta de mascota */
+.mascota-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones */
+  margin-left: 30px;
+}
+
+/* Estilo cuando se pasa el ratón sobre la tarjeta */
+.mascota-card:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.05); /* Escala un poco más grande */
+}
+
+/* Estilo cuando se hace clic en la tarjeta */
+.mascota-card.clicked {
+  background-color: #e0e0e0;
+  transform: scale(0.95); /* Escala un poco más pequeña */
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+.loader i {
+  font-size: 2em;
+}
+
+.loader p {
+  margin-top: 10px;
+}
+
+/* Estilo para la capa de fondo semitransparente */
+
+/* Estilo para el contenedor del símbolo de carga */
+
+.input-right-aligned {
+  float: right;
+  clear: both;
+}
+
+.round-button {
+  /* Estilos del botón redondo */
+  display: inline-block;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+
+  color: #fff;
+  background-color: #ed6436;
+  border-color: #ed6436;
+}
+
+/* CSS personalizado para espaciar filas y columnas */
+table {
+  border-collapse: separate;
+  border-spacing: 10px; /* Espacio entre filas y columnas */
+}
+
+td,
+th {
+  padding: 10px; /* Relleno dentro de las celdas */
+}
+
+.scrollable-section {
+  height: 400px; /* Establece la altura máxima de la sección */
+  overflow-y: auto; /* Habilita el scroll vertical cuando el contenido excede la altura */
+}
+
+.icono-azul {
+  color: #117a8b; /* Cambia 'blue' al color que desees */
+}
+
+.icono-rojo {
+  color: #dc3545; /* Cambia 'blue' al color que desees */
+}
+
+.select-selector {
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 8px; /* Ajuste de relleno para mejor apariencia */
+  background-color: #ed6436; /* Color de fondo naranja */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  border: none; /* Sin bordes */
+}
+
+/* Estilo para las opciones del selector */
+.option-selector {
+  background-color: white; /* Color de fondo para opciones */
+  color: black; /* Color del texto para opciones */
+}
+
+/* Estilo para el contenedor del selector y la etiqueta asociada */
+
+select option[disabled]:first-child {
+  display: none;
+}
+
+.input-selector {
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 8px; /* Ajuste de relleno para mejor apariencia */
+  background-color: #ed6436; /* Color de fondo naranja */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  border: none; /* Sin bordes */
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #777777;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.mat-dialog-actions-custom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center; /* Alinea el contenido al centro */
+}

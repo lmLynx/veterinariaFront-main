@@ -1,0 +1,47 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">Vacunas de
+        {{mascota.nombre}}
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div class="contenedor">
+        <div class="col-md-12">
+            <table>
+                <thead>
+                    <!-- style="width: 10;" -->
+                    <th style="text-align: left;">
+                        <strong> Vacuna</strong>
+                    </th>
+                    <th style="text-align: left;">
+                        <strong> Fecha aplicación</strong>
+                    </th>
+                    <th style="text-align: left;">
+                        <strong> Veterinario </strong>
+                    </th>
+                </thead>
+            </table>
+            <tbody>
+                <tr *ngFor="let vacuna of listaVacunas">
+                    <td style="text-align: left;">
+                        {{ vacuna.nombreVacuna }}
+                    </td>
+                    <td style="text-align: left;">
+                        {{ vacuna.fecha }}
+                    </td>
+                    <td style="text-align: left;">
+                        {{ vacuna.nombreVeterinario }}
+                    </td>
+                </tr>
+            </tbody>
+
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="justify-content: center;" class="mat-dialog-actions-custom">
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="voltearTarjeta()">volver</button>
+    <div style="width: 20px;"></div>
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">Cerrar</button>
+
+</mat-dialog-actions>

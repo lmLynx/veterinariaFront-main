@@ -1,0 +1,94 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">Agregar mascota</h2>
+</div>
+
+<mat-dialog-content>
+    <div class="container">
+        <form id="login-form" [formGroup]="mascotaForm">
+
+            <!-- nombre -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="nombre">Nombre*
+                        <!-- <i class="fa fa-github-alt"></i> -->
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="nombre" style="width: 100%;" name="nombre" formControlName="nombre" required
+                        size="30">
+                    <div *ngIf="submitted && f['nombre'].errors" class="text-black">
+                        El nombre es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- raza -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="raza">Raza*
+                        <!-- <i class="fas fa-envelope"></i> -->
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="raza" style="width: 100%;" name="raza" formControlName="raza" required
+                        size="30">
+                    <div *ngIf="submitted && f['raza'].errors" class="text-black">
+                        La raza es obligatoria.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipo -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="tipo">Tipo*
+                        <!-- <i class="fas fa-envelope"></i> -->
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <select formControlName="tipo" style="width: 100%;" id="tipo">
+                        <option *ngFor="let opcion of tiposMascota" [value]="opcion">{{ opcion }}</option>
+                    </select>
+                    <div *ngIf="submitted && f['tipo'].errors" class="text-black">
+                        El tipo es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edad -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="edad">Edad en años*
+                        <!-- <i class="fas fa-envelope"></i> -->
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="number" id="edad" name="edad" style="width: 100%;" formControlName="edad" required
+                        size="30">
+                    <div *ngIf="submitted && f['edad'].errors" class="text-black">
+                        La edad es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="fileInput" class="custom-file-upload">
+                        <input type="file" id="fileInput" (change)="handleFileInput($event)">
+                        Subir Foto
+                    </label>
+                </div>
+            </div>
+
+            <img src="" alt="Imagen" id="imagePreview" class="image-preview">
+
+        </form>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions style="justify-content: center;">
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">Volver</button>
+    <div style="width: 20px;"></div>
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarMascota()">Agregar</button>
+</mat-dialog-actions>

@@ -1,0 +1,126 @@
+<div class="container">
+    <h2>Gestion de Citas</h2>
+    <form [formGroup]="citasForm">
+        <div class="row">
+
+            <div class="col-md-3">
+                <input class="input-selector" type="date" id="fecha" name="fecha" formControlName="fecha">
+            </div>
+
+            <div class="col-md-3">
+                <input placeholder="Cédula" class="input-selector" type="text" id="cedula" style="width: 100%;"
+                    name="cedula" formControlName="cedula">
+            </div>
+
+
+            <div class="col-md-2">
+                <select style="width: 100%; padding-right: 0;" formControlName="estado" [(ngModel)]="estado"
+                    class="select-selector" id="opciones" name="opciones" (change)="seleccionar()">
+                    <option value="" selected disabled>Estado</option>
+                    <option class="option-selector" *ngFor="let estado of estados" [value]="estado">
+                        {{ estado }}
+
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="col-md-1" *ngIf="opcionSeleccionada">
+                <button style="background-color: #b21f2d;" (click)="deseleccionar()">
+                    x
+                </button>
+            </div>
+
+            <div class="col-md-1">
+                <button  mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                    (click)="consultarCitas()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- btn agregar -->
+            <div class="col-md-1">
+                <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarCita()">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row scrollable-section" [hidden]="!mostrarTabla">
+        <div class="col-md-12">
+            <table>
+                <thead>
+                    <!-- style="width: 10;" -->
+                    <th style="text-align: left;">
+                        <strong> Fecha Cita </strong>
+                    </th>
+
+                    <th style="text-align: left;  width: 150px;">
+                        <strong> Dueño </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Mascota </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Tipo cita </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Estado </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Acciones </strong>
+                    </th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let cita of citas">
+                        <td style="text-align: left;">
+                            {{ cita.fecha }}
+                            {{ cita.hora }}
+                        </td>
+
+                        <td style="text-align: left; width: 150px;">
+                            {{ cita.nombreUsuario }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            {{ cita.nombreMascota }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            {{ cita.tipoCitaMascotaEnum }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            {{ cita.estadoCitaMedicaEnum }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i title="Consulta" class="fa fa-search icono-azul" aria-hidden="true"
+                                        (click)="consultarCita(cita)">
+                                    </i>
+                                </div>
+                                <div class="col-md-6">
+                                    <i title="Cancelar" class="fa fa-ban icono-rojo" aria-hidden="true"
+                                        (click)="cancelarCita(cita)">
+                                    </i>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="!mostrarTabla">
+        <app-info-box></app-info-box>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">Carnet de {{mascota.nombre}}
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div class="container">
+        <form id="carnet-form" [formGroup]="carnetForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{mascota.imagenMascota}}" class="card-img-top" alt="Imagen de {{ mascota.nombre }}"
+                        style="width: 200px; height: 200px;">
+                    <label for="fileInput" class="custom-file-upload">
+                        <input type="file" id="fileInput" (change)="handleFileInput($event)">
+                        Cambiar foto
+                    </label>
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="form-group row">
+                        <div class="col-md-12" style="margin-bottom: 5px;">
+                            <label style="margin-right: 10px; font-size: x-large;" for="nombre">Nombre</label>
+                            <input class="input-right-aligned" type="text" id="nombre" name="nombre"
+                                formControlName="nombre" size="30" style="width: 60%;">
+
+                        </div>
+
+                        <div class="col-md-12" style="margin-bottom: 5px;">
+                            <label style="margin-right: 10px; font-size: x-large;" for="edad">Edad</label>
+                            <input class="input-right-aligned" type="text" id="edad" name="edad" formControlName="edad"
+                                size="30" style="width: 60%;">
+                        </div>
+
+                        <div class="col-md-12" style="margin-bottom: 5px;">
+                            <label style="margin-right: 10px; font-size: x-large;" for="raza">Raza</label>
+                            <input class="input-right-aligned" type="text" id="raza" name="raza" formControlName="raza"
+                                size="30" style="width: 60%;">
+                        </div>
+
+                        <div class="col-md-12" style="margin-bottom: 5px;">
+                            <label style="margin-right: 10px; font-size: x-large;" for="tipo">Tipo Mascota</label>
+                            <input class="input-right-aligned" type="text" id="tipo" name="tipo" formControlName="tipo"
+                                size="30" style="width: 60%;">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label style="margin-right: 10px; font-size: x-large;"
+                                for="observacion">Observaciones</label>
+                            <textarea class="input-right-aligned" id="observacion" name="observacion"
+                                formControlName="observacion" style="width: 60%;">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button class="round-button" (click)="voltearTarjeta()">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="justify-content: center;">
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">Cerrar</button>
+    <div style="width: 20px;"></div>
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+        (click)="actualizarMascota()">Actualizar</button>
+</mat-dialog-actions>

@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Gestion de Clientes</h2>
+    <form [formGroup]="usuarioForm">
+        <div class="row">
+
+            <div class="col-md-4">
+                <input placeholder="Cédula" class="input-selector" type="text" id="cedula" style="width: 100%;"
+                    name="cedula" formControlName="cedula">
+            </div>
+
+            <div class="col-md-4">
+                <input placeholder="Nombre" class="input-selector" type="text" id="nombre" style="width: 100%;"
+                    name="nombre" formControlName="nombre">
+            </div>
+
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <button  mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                    (click)="consultarUsuarios()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+             <!-- btn agregar -->
+             <div class="col-md-1">
+                <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarUsuario()">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row scrollable-section" [hidden]="!mostrarTabla">
+        <div class="col-md-12">
+            <table>
+                <thead>
+                    <th style="text-align: left; width: 250px;">
+                        <strong> Nombre </strong>
+                    </th>
+
+                    <th style="text-align: left; width: 200px;">
+                        <strong> Cédula </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Acciones </strong>
+                    </th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let user of usuarios">
+                        <td style="text-align: left;  width: 250px;">
+                            {{ user.nombre }}
+                        </td>
+
+                        <td style="text-align: left;  width: 100px;">
+                            {{ user.cedula }}
+                        </td>
+
+                        <td style="text-align: center;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i title="Consulta" class="fa fa-search icono-azul" aria-hidden="true"
+                                        (click)="consultarUser(user)">
+                                    </i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="!mostrarTabla">
+        <app-info-box></app-info-box>
+    </div>
+</div>

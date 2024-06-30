@@ -1,0 +1,30 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">
+        Información Usuario
+    </h2>
+</div>
+
+
+<mat-dialog-content>
+
+    <form id="usuarioForm" [formGroup]="usuarioForm">
+        <div class="row">
+
+            <div class="col-md-12">
+                <p><b>Nombre:</b> {{ usuario.nombre }}</p>
+            </div>
+
+            <div class="col-md-12">
+                <p><b>Estado:</b> {{ estado }}</p>
+            </div>
+        </div>
+    </form>
+
+    <div class="row" style="justify-content: center;">
+
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">
+            Aceptar
+        </button>
+    </div>
+</mat-dialog-content>
+

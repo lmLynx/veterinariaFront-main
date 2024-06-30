@@ -1,0 +1,22 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">
+        Cancelar cita
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div class="container">
+        <p>¿Deseas cancelar la cita para la mascota {{citaCancelar.nombreMascota}} <br>en la fecha
+            {{citaCancelar.fecha}}?</p>
+    </div>
+
+    <div class="row" style="justify-content: center;">
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">
+            Cerrar
+        </button>
+        <div style="width: 20px;"></div>
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="cancelarCita()">
+            Aceptar
+        </button>
+    </div>
+</mat-dialog-content>

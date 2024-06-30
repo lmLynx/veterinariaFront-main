@@ -1,0 +1,30 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark">
+    <div class="row py-3 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-capitalize">
+                    <span class="text-primary">Virtual</span>
+                    <span class="text-white">Pet</span>
+                </h1>
+            </a>
+        </div>
+    </div>
+</div>
+<br />
+<!-- Topbar End -->
+
+<div class="container-fluid bg-light">
+    <p>¿Deseas validar el correo?</p>
+
+    <div class="d-inline-flex align-items-center">
+        <!-- <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Iniciar sesión</a> -->
+        <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="validarSi()">
+            Si
+        </button>
+        <div style="width: 20px;"></div>
+        <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="validarNo()">
+            No
+        </button>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="container">
+    <h2>Gestion de vacunas</h2>
+    <form [formGroup]="vacunasForm">
+        <div class="row">
+
+            <!-- tipo mascota -->
+            <div class="col-md-3">
+                <select style="width: 90%;" formControlName="tipo" [(ngModel)]="tipo" class="select-selector"
+                    id="opciones" name="opciones" (change)="seleccionar()">
+                    <option value="" selected disabled>tipo</option>
+                    <option class="option-selector" *ngFor="let tipo of tipos" [value]="tipo">
+                        {{ tipo }}
+                    </option>
+                </select>
+            </div>
+
+            <div class="col-md-1" *ngIf="opcionSeleccionada">
+                <button style="background-color: #b21f2d;" (click)="deseleccionar()">
+                    x
+                </button>
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="consultarVacunas()">
+                    Filtrar
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-md-3"></div>
+
+            <!-- btn agregar -->
+            <div class="col-md-1">
+                <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarVacuna()">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+
+        </div>
+    </form>
+    <div class="row" [hidden]="!mostrarTabla">
+        <div class="col-md-12 scrollable-section">
+            <table>
+                <thead>
+                    <!-- style="width: 10;" -->
+                    <th style="text-align: left; width: 250px;">
+                        <strong> Nombre vacuna </strong>
+                    </th>
+
+                    <th style="text-align: left;  width: 200px;">
+                        <strong> Tipo Mascota </strong>
+                    </th>
+
+                    <th style="text-align: left;  width: 200px;">
+                        <strong> Unidades </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Acciones </strong>
+                    </th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let vacuna of listaVacunas">
+                        <td style="text-align: left;  width: 150px;">
+                            {{ vacuna.nombre }}
+                        </td>
+
+                        <td style="text-align: left;  width: 150px;">
+                            {{ vacuna.tipoMascota }}
+                        </td>
+
+                        <td style="text-align: left;  width: 150px;">
+                            {{ vacuna.unidadDisponible }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i title="Consulta" class="fa fa-search icono-azul" aria-hidden="true"
+                                        (click)="consultarVacuna(vacuna)">
+                                    </i>
+                                </div>
+                                <div class="col-md-6">
+                                    <i title="Cancelar" class="fa fa-ban icono-rojo" aria-hidden="true"
+                                        (click)="cancelarVacuna(vacuna)">
+                                    </i>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="!mostrarTabla">
+        <app-info-box></app-info-box>
+    </div>
+</div>

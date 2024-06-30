@@ -1,0 +1,31 @@
+<div class="container-fluid row">
+
+  <div class="col-md-7">
+    <h2>Mis mascotas</h2>
+  </div>
+  <div class="col-lg-5 text-center text-lg-right">
+    <div class="d-inline-flex align-items-center">
+      <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarMascota()">Agregar mascota</button>
+    </div>
+  </div>
+  <div class="col-md-1">
+  </div>
+  <div class="container scrollable-section">
+    <div class="row">
+      <div class="col-md-3 mascota-card" *ngFor="let mascota of mascotas" (click)="onMascotaClick(mascota)"
+        [ngClass]="{'clicked': mascota.clicked}">
+        <div class="card">
+          <!-- <img src="../../../assets/img/pInicio3.png" class="card-img-top" alt="Imagen de {{ mascota.nombre }}"> -->
+          <img src="{{mascota.imagenMascota}}" class="card-img-top" alt="Imagen de {{ mascota.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ mascota.nombre }}</h5>
+            <p class="card-text">Edad: {{ mascota.edad }}</p>
+            <p class="card-text">Raza: {{ mascota.raza }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-agregar-mascota *ngIf="showModal"></app-agregar-mascota>

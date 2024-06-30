@@ -1,0 +1,271 @@
+<!-- Topbar Start -->
+<div class="container-fluid">
+  <div class="row py-3 px-lg-5">
+    <div class="col-lg-4">
+      <a href="" class="navbar-brand d-none d-lg-block">
+        <h1 class="m-0 display-5 text-capitalize">
+          <span class="text-primary">Virtual</span>Pet
+        </h1>
+      </a>
+    </div>
+    <div class="col-lg-8 text-center text-lg-right">
+      <div class="d-inline-flex align-items-center">
+        <!-- <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Iniciar sesión</a> -->
+        <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="navegarAInicioUser()">
+          Iniciar Sesión
+        </button>
+        <div style="width: 20px;"></div>
+        <button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="navegarACrearUsuarior()">
+          Registrarse
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+      <div class="navbar-nav mr-auto py-0">
+        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+        <a (click)="navegarASobreNosotros()" class="nav-item nav-link">Nosotros</a>
+        <a (click)="navegarAservicios()" class="nav-item nav-link">Servicios</a>
+        <a (click)="navegarAContactenos()" class="nav-item nav-link">Contactenos</a>
+      </div>
+
+      <div class="d-inline-flex align-items-center">
+        <div class="d-inline-flex flex-column text-center pr-3 border-right">
+          <h6 class="text-white">Horarios de Atención</h6>
+          <p class="m-0 text-white">{{horario}}</p>
+        </div>
+        <div class="d-inline-flex flex-column text-center px-3 border-right">
+          <h6 class="text-white">Coreo</h6>
+          <p class="m-0 text-white">{{correo}}</p>
+        </div>
+        <div class="d-inline-flex flex-column text-center pl-3">
+          <h6 class="text-white">Telefono</h6>
+          <p class="m-0 text-white">{{telefono}}</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- About Start sobre nosotros -->
+<div class="container py-5" id="seccionSobreNosotros">
+  <div class="row py-5">
+    <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
+      <h4 class="text-secondary mb-3">Sobre nosotros</h4>
+      <h1 class="display-4 mb-4">
+        <span class="text-primary">Veterinaria</span> &
+        <span class="text-secondary">Spa</span>
+      </h1>
+      <h5 class="text-muted mb-3">
+        Aqui podras obtener el apoyo que necesitas para cuidar mas a tus
+        mascotas .
+      </h5>
+      <p class="mb-4">
+        Entendemos lo importante que son tus mascotas, ya que reconocemos el
+        lugar especial que ocupan en nuestras vidas y cómo forman parte de
+        nuestra familia. En nuestro centro, nos comprometemos a cuidar y tratar
+        a tus queridos compañeros con el respeto y el cariño que se merecen.
+      </p>
+      <ul class="list-inline">
+        <li>
+          <h5>
+            <i class="fa fa-check-double text-secondary mr-3"></i>Mejor en la
+            industria
+          </h5>
+        </li>
+        <li>
+          <h5>
+            <i class="fa fa-check-double text-secondary mr-3"></i>Servicios de
+            emergencia
+          </h5>
+        </li>
+        <li>
+          <h5>
+            <i class="fa fa-check-double text-secondary mr-3"></i>Atención al
+            cliente 24 horas, los 7 dias a la semana
+          </h5>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-5">
+      <div class="row px-3">
+        <div class="col-12 p-0">
+          <img class="img-fluid w-100" src="../../assets/img/about-1.jpg" alt="" />
+        </div>
+        <div class="col-6 p-0">
+          <img class="img-fluid w-100" src="../../assets/img/about-2.jpg" alt="" />
+        </div>
+        <div class="col-6 p-0">
+          <img class="img-fluid w-100" src="../../assets/img/about-3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+<!-- Services Start servicios-->
+<div class="container-fluid bg-light pt-2" id="seccionServicios">
+  <div class="container py-5">
+    <div class="d-flex flex-column text-center mb-5">
+      <h4 class="text-secondary mb-3">Nuestros Servicios</h4>
+      <h1 class="display-4 m-0">
+        <span class="text-primary">Servicios especiales</span> para tu mascota
+      </h1>
+    </div>
+    <div class="row pb-3">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
+          <h3 class="flaticon-house display-3 font-weight-normal text-secondary mb-3"></h3>
+          <h3 class="mb-3">Veterinaria</h3>
+          <p>Tu mascota tambien necesita cuidados especiales</p>
+          <a class="text-uppercase font-weight-bold" href="">Leer mas</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
+          <h3 class="flaticon-food display-3 font-weight-normal text-secondary mb-3"></h3>
+          <h3 class="mb-3">Alimentacion</h3>
+          <p>ecuerda que tu mascota necesita una alimentacion especial</p>
+          <a class="text-uppercase font-weight-bold" href="">Leer mas</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
+          <h3 class="flaticon-grooming display-3 font-weight-normal text-secondary mb-3"></h3>
+          <h3 class="mb-3">Aseo mascotas</h3>
+          <p>El aseo de las mascotas es muy importante para su salud</p>
+          <a class="text-uppercase font-weight-bold" href="">Leer mas </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services End -->
+
+<!-- Features Start -->
+<div class="container" id="seccionContacto">
+  <div class="row align-items-center">
+    <div class="col-lg-5">
+      <img class="img-fluid w-100" src="../../assets/img/feature.jpg" alt="" />
+    </div>
+    <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
+      <h4 class="text-secondary mb-3">¿Por qué elegirnos?</h4>
+      <h1 class="display-4 mb-4">
+        <span class="text-primary">Cuidados especiales</span> para mascotas
+      </h1>
+      <p class="mb-4">
+        En nuestro compromiso total con el bienestar de tus queridas mascotas,
+        puedes confiar plenamente en nosotros. Nuestra dedicación inquebrantable
+        se refleja en cada aspecto de nuestros servicios, garantizando que tu
+        compañero peludo reciba el cuidado que merece. Tu tranquilidad y la
+        felicidad de tu mascota son nuestra máxima prioridad.
+      </p>
+      <div class="row py-2">
+        <div class="col-6">
+          <div class="d-flex align-items-center mb-4">
+            <h1 class="flaticon-cat font-weight-normal text-secondary m-0 mr-3"></h1>
+            <h5 class="text-truncate m-0">Mejor en la industria</h5>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center mb-4">
+            <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
+            <h5 class="text-truncate m-0">Servicios de emergencia</h5>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
+            <h5 class="text-truncate m-0">Cuidado especial</h5>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
+            <h5 class="text-truncate m-0">Atención al cliente</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Features End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+  <div class="row pt-5">
+    <div class="col-lg-4 col-md-12 mb-5">
+      <h1 class="mb-3 display-5 text-capitalize text-white">
+        <span class="text-primary">Virtual</span>pet
+      </h1>
+      <p class="m-0">
+        En nuestro compromiso total con el bienestar de tus queridas mascotas,
+        puedes confiar plenamente en nosotros. Nuestra dedicación inquebrantable
+        se refleja en cada aspecto de nuestros servicios, garantizando que tu
+        compañero peludo reciba el cuidado que merece. Tu tranquilidad y la
+        felicidad de tu mascota son nuestra máxima prioridad.
+      </p>
+    </div>
+    <div class="col-lg-8 col-md-12">
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <h5 class="text-primary mb-4">Contactenos</h5>
+          <p>
+            <i class="fa fa-map-marker-alt mr-2"></i>{{ubicacion}}
+          </p>
+          <p><i class="fa fa-phone-alt mr-2"></i>{{telefono}}</p>
+          <p><i class="fa fa-envelope mr-2"></i>{{correo}}</p>
+          <div class="d-flex justify-content-start mt-4">
+            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px"
+              href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px"
+              href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px"
+              href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px"
+              href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+          <h5 class="text-primary mb-4">Popular Links</h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
+            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+          <h5 class="text-primary mb-4">Ingresar</h5>
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control border-0" placeholder="Usuario" required="required" />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control border-0" placeholder="Contrasena" required="required" />
+            </div>
+            <div>
+              <button class="btn btn-lg btn-primary btn-block border-0" type="submit">
+                Ingresar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

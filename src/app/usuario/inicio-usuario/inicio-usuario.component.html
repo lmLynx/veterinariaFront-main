@@ -1,0 +1,50 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">Iniciar Sesión</h2>
+</div>
+<mat-dialog-content>
+    <div class="container">
+        <form id="login-form" [formGroup]="userForm">
+            <div class="form-group row">
+                <div class="col-md-12" >
+                    <label for="username">Correo*
+                        <i class="fas fa-envelope"></i> 
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="username" name="username" formControlName="correo" required size="30">
+                    <div *ngIf="submitted && f['correo'].errors" class="text-black">
+                        {{ mensajeCorreo }}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="password">Contraseña*
+                        <i class="fa fa-unlock" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="password" id="password" name="password" formControlName="password" required size="30">
+                    <div *ngIf="submitted && f['password'].errors" class="text-black">
+                        La contraseña es obligatoria.
+                      </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Agregar la imagen aquí -->
+    <div class="form-group row">
+        <div class="col-md-12 text-center">
+            <img src="../../../assets/img/pInicio3.png" alt="Imagen de ejemplo" width="230">
+            <!-- <img src="../../../assets/img/p.png" alt="Imagen de ejemplo" width="300"> -->
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="justify-content: center;">
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">Volver</button>
+    <div style="width: 20px;"></div>
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="iniciarSesion()">Ingresar</button>
+</mat-dialog-actions>

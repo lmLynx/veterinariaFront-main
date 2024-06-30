@@ -1,0 +1,109 @@
+<div class="container-fluid bg-dark">
+    <h2 style="text-align: center; height:50px; vertical-align: middle;" class="text-white">
+        Agregar Usuario
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div class="container">
+        <form id="login-form" [formGroup]="crearUsuarioForm">
+
+            <!-- Correo -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="nombre">Correo*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="correo" style="width: 100%;" name="correo" formControlName="correo"
+                        required size="60" placeholder="Tu correo" >
+                    <div *ngIf="submitted && f['correo'].errors" class="text-black">
+                        {{ mensajeCorreo }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- cel -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="celular">Celular*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="celular" style="width: 100%;" name="celular" formControlName="celular"
+                        required size="30" placeholder="Tu celular" >
+                    <div *ngIf="submitted && f['celular'].errors" class="text-black">
+                        El celular es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- nombre -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="nombre">Nombre*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="nombre" style="width: 100%;" name="nombre" formControlName="nombre" required
+                        size="30" placeholder="Tu Nombre" >
+                    <div *ngIf="submitted && f['nombre'].errors" class="text-black">
+                        El nombre es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- cedula -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="cedula">Cedula*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="cedula" style="width: 100%;" name="cedula" formControlName="cedula" required
+                        size="30" placeholder="Tu cedula" >
+                    <div *ngIf="submitted && f['cedula'].errors" class="text-black">
+                        La cedula es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- contraseña -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="cedula">Contraseña*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="password" id="password" style="width: 100%;" name="password" formControlName="password"
+                        required size="30" placeholder="Contraseña">
+                    <div *ngIf="submitted && f['password'].errors" class="text-black">
+                        La contraseña es obligatorio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- contraseña conf -->
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="cedula">Confirmar contraseña*
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input type="password" id="Cpassword" style="width: 100%;" name="Cpassword"
+                        formControlName="Cpassword" required size="30" placeholder="Confirmar contraseña">
+                    <div *ngIf="submitted && f['Cpassword'].errors" class="text-black">
+                        La confirmacion de la contraseña es obligatoria.
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="justify-content: center;">
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="volver()">Volver</button>
+    <div style="width: 20px;"></div>
+    <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="agregarUsuario()">Agregar</button>
+</mat-dialog-actions>

@@ -1,0 +1,95 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark">
+    <div class="row py-3 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-capitalize">
+                    <span class="text-primary">Virtual</span>
+                    <span class="text-white">Pet</span>
+                </h1>
+            </a>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+                <button (click)="volver()" class="btn btn-lg btn-primary px-3 d-none d-lg-block">
+                    Cerrar sesión
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<!-- Topbar End -->
+
+<!-- perfil -->
+
+<div class="container-fluid bg-light">
+
+    <div class="contenedor">
+        <div class="izquierda">
+            <div class="menu-lateral">
+                <!-- <div class="col-md-12 text-center">
+                    <img src="../../../assets/img/p.png" alt="Imagen de ejemplo" width="300">
+                </div> -->
+
+                <h1 style="text-align: center;">Bienvenido!</h1>
+
+                <ul>
+                    <li>
+                        <button (click)="mostrarInformacion()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Información del perfil
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarEditar()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Editar perfil
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarMascotas()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Mis mascotas
+                            <i class="fa fa-paw" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button (click)="mostrarAgenda()" class="btn btn-lg btn-primary px-3 d-none d-lg-block"
+                            style="width: 100%;">
+                            Agenda de mascotas
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <!-- Agrega más opciones de menú según sea necesario -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="centro">
+        </div>
+        <div class="derecha">
+            <div class="margen-derecha">
+                
+                <div *ngIf="mostrarInformacionB">
+                    <app-informacion-perfil-usuario></app-informacion-perfil-usuario>
+                </div>
+
+                <div *ngIf="mostrarEditaB">
+                    <app-editar-usuario></app-editar-usuario>
+                </div>
+
+                <div class="row" *ngIf="mostrarMascotasB">
+                    <app-lista-mascotas></app-lista-mascotas>
+                </div>
+
+                <div *ngIf="mostrarAgendabB">
+                    <app-agenda-mascotas></app-agenda-mascotas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

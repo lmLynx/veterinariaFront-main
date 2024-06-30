@@ -1,0 +1,79 @@
+<div class="container-fluid row">
+    <div class="col-md-9">
+        <h2>Agenda de citas</h2>
+    </div>
+    <div class="col-lg-3 text-lg-right">
+        <button mat-button class="btn btn-lg btn-primary px-3 d-none d-lg-block" (click)="irCrear()">
+            Agregar cita
+        </button>
+    </div>
+
+    <div class="row scrollable-section">
+        <div class="col-md-12">
+            <table>
+                <thead>
+                    <!-- style="width: 10;" -->
+                    <th style="text-align: left;">
+                        <strong> Fecha </strong>
+                    </th>
+                    <th style="text-align: left; ">
+                        <strong> Hora </strong>
+                    </th>
+                    <th style="text-align: left; width: 100px;">
+                        <strong> Mascota </strong>
+                    </th>
+
+                    <th style="text-align: left; width: 100px;">
+                        <strong> Tipo cita </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Estado </strong>
+                    </th>
+
+                    <th style="text-align: left;">
+                        <strong> Acciones </strong>
+                    </th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let cita of citas">
+                        <td style="text-align: left;">
+                            {{ cita.fecha }}
+                        </td>
+                        <td style="text-align: left;">
+                            {{ cita.hora }}
+                        </td>
+                        <td style="text-align: left;">
+                            {{ cita.nombreMascota }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            {{ cita.tipoCitaMascotaEnum }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            {{ cita.estadoCitaMedicaEnum }}
+                        </td>
+
+                        <td style="text-align: left;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i title="Consulta" class="fa fa-search icono-azul" aria-hidden="true"
+                                        (click)="consultarCita(cita)">
+                                    </i>
+                                </div>
+                                <div class="col-md-6">
+                                    <i title="Cancelar" class="fa fa-ban icono-rojo" aria-hidden="true"
+                                    (click)="cancelarCita(cita)">
+                                </i>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
