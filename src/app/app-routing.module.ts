@@ -8,7 +8,7 @@ import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.com
 import { ValidarMailComponent } from './usuario/validar-mail/validar-mail.component';
 import { PanelControlAdminComponent } from './administrador/panel-control-admin/panel-control-admin.component';
 
-const routes: Routes = [
+export const routes: Routes = [
     { path: '', redirectTo: '/inicio', pathMatch: 'full' },
     { path: 'inicio', component: PrincipalComponent }, // Ruta de la pantalla de inicio
     { path: 'app-inicio-usuario', component: InicioUsuarioComponent }, // Ruta hacia otro componente
