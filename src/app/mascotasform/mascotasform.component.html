@@ -1,0 +1,58 @@
+<div class="container border-light-subtle">
+    <div class="card border-light-subtle">
+        <div class="card-header">
+            <h1 class="card-title text-center text-info"> {{titulo}} </h1>
+        </div>
+        <div class="card-body text-center text-primary">
+            <form>
+                <div class="mb-3 ">
+                  <label for="idC" class="form-label">ID de la Mascota</label>
+                  <input type="number" class="form-control" id="idC" name="v1" [(ngModel)]="mascota.idMascota">
+                </div>
+            
+                <div class="mb-3">
+                  <label for="nombreC" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombreC"  name="v2" [(ngModel)]="mascota.nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Especie</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v3" [(ngModel)]="mascota.especie">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Raza</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v4" [(ngModel)]="mascota.raza">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Cliente</label>
+                    <input type="number" class="form-control" id="descripcionC"  name="v5" [(ngModel)]="mascota.idCliente.idCliente">
+                </div>
+                  
+                  <div class="d-grid gap-2">
+                    <button *ngIf="mascota.idMascota === 0" 
+                    type="submit" 
+                    class="btn btn-primary" 
+                    (click)="registrarMascota()">Registrar Mascota</button>
+
+                    <button *ngIf="mascota.idMascota !== 0" 
+                    type="submit" 
+                    class="btn btn-success" 
+                    (click)="updateMascota()">Actualizar Mascota</button>
+                </div>
+
+                <!-- <div class="d-grid gap-2">
+                    @if (mascota.idMascota === 0) {
+                        <button type="submit" class="btn btn-primary" (click)="registrarMascota()">Registrar Datos</button>
+                    } @else {
+                        <button type="submit" class="btn btn-success" (click)="actualizarMascota()">Actualizar Datos</button>
+                    }
+                </div> -->
+                
+                
+            </form>
+        </div>
+    </div>
+</div>
+

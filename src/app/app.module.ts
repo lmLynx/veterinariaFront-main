@@ -36,6 +36,16 @@ import { ConsultarVacunaComponent } from './administrador/panel-control-admin/va
 import { SistemaControlComponent } from './administrador/panel-control-admin/sistema-control/sistema-control.component';
 import { CrearUsuarioControlComponent } from './administrador/panel-control-admin/usuarios-control/crear-usuario-control/crear-usuario-control.component';
 import { ConsultarUsuarioControlComponent } from './administrador/panel-control-admin/usuarios-control/consultar-usuario-control/consultar-usuario-control.component';
+import { MascotasComponent } from './mascotas/mascotas.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { VeterinariosComponent } from './veterinarios/veterinarios.component';
+import { ConsultasComponent } from './consultas/consultas.component';
+import { RecetasComponent } from './recetas/recetas.component';
+import { ClientesformComponent } from './clientesform/clientesform.component';
+import { VeterinariosformComponent } from './veterinariosform/veterinariosform.component';
+import { MascotasformComponent } from './mascotasform/mascotasform.component';
+import { ConsultasformComponent } from './consultasform/consultasform.component';
+import { RecetasformComponent } from './recetasform/recetasform.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +77,16 @@ import { ConsultarUsuarioControlComponent } from './administrador/panel-control-
     SistemaControlComponent,
     CrearUsuarioControlComponent,
     ConsultarUsuarioControlComponent,
+    MascotasComponent,
+    ClientesComponent,
+    VeterinariosComponent,
+    ConsultasComponent,
+    RecetasComponent,
+    ClientesformComponent,
+    VeterinariosformComponent,
+    MascotasformComponent,
+    ConsultasformComponent,
+    RecetasformComponent,
   ],
   imports: [
     AppRoutingModule,

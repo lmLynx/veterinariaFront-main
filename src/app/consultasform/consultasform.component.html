@@ -1,0 +1,63 @@
+<div class="container border-light-subtle">
+    <div class="card border-light-subtle">
+        <div class="card-header">
+            <h1 class="card-title text-center text-info"> {{titulo}} </h1>
+        </div>
+        <div class="card-body text-center text-primary">
+            <form>
+                <div class="mb-3 ">
+                  <label for="idC" class="form-label">ID de la Consulta</label>
+                  <input type="number" class="form-control" id="idC" name="v1" [(ngModel)]="consulta.idConsulta">
+                </div>
+            
+                <div class="mb-3">
+                  <label for="nombreC" class="form-label">Fecha</label>
+                  <input type="text" class="form-control" id="nombreC"  name="v2" [(ngModel)]="consulta.fecha">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Motivo</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v3" [(ngModel)]="consulta.motivo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Diagnóstico</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v4" [(ngModel)]="consulta.diagnostico">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">idMascota</label>
+                    <input type="number" class="form-control" id="descripcionC"  name="v5" [(ngModel)]="consulta.idMascota.idMascota">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">idVeterinario</label>
+                    <input type="number" class="form-control" id="descripcionC"  name="v6" [(ngModel)]="consulta.idVeterinario.idVeterinario">
+                </div>
+                  
+                  <div class="d-grid gap-2">
+                    <button *ngIf="consulta.idConsulta === 0" 
+                    type="submit" 
+                    class="btn btn-primary" 
+                    (click)="registrarConsulta()">Registrar Consulta</button>
+
+                    <button *ngIf="consulta.idConsulta !== 0" 
+                    type="submit" 
+                    class="btn btn-success" 
+                    (click)="updateConsulta()">Actualizar Consulta</button>
+                </div>
+
+                <!-- <div class="d-grid gap-2">
+                    @if (consulta.idConsulta === 0) {
+                        <button type="submit" class="btn btn-primary" (click)="registrarConsulta()">Registrar Datos</button>
+                    } @else {
+                        <button type="submit" class="btn btn-success" (click)="actualizarConsulta()">Actualizar Datos</button>
+                    }
+                </div> -->
+                
+                
+            </form>
+        </div>
+    </div>
+</div>
+

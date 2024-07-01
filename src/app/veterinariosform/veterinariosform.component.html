@@ -1,0 +1,53 @@
+<div class="container border-light-subtle">
+    <div class="card border-light-subtle">
+        <div class="card-header">
+            <h1 class="card-title text-center text-info"> {{titulo}} </h1>
+        </div>
+        <div class="card-body text-center text-primary">
+            <form>
+                <div class="mb-3 ">
+                  <label for="idC" class="form-label">ID del Veterinario</label>
+                  <input type="number" class="form-control" id="idC" name="v1" [(ngModel)]="veterinario.idVeterinario">
+                </div>
+            
+                <div class="mb-3">
+                  <label for="nombreC" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombreC"  name="v2" [(ngModel)]="veterinario.nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Especialidad</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v3" [(ngModel)]="veterinario.especialidad">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcionC" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="descripcionC"  name="v4" [(ngModel)]="veterinario.telefono">
+                </div>
+                  
+                  <div class="d-grid gap-2">
+                    <button *ngIf="veterinario.idVeterinario === 0" 
+                    type="submit" 
+                    class="btn btn-primary" 
+                    (click)="registrarVeterinario()">Registrar Veterinario</button>
+
+                    <button *ngIf="veterinario.idVeterinario !== 0" 
+                    type="submit" 
+                    class="btn btn-success" 
+                    (click)="updateVeterinario()">Actualizar Veterinario</button>
+                </div>
+
+                <!-- <div class="d-grid gap-2">
+                    @if (veterinario.idVeterinario === 0) {
+                        <button type="submit" class="btn btn-primary" (click)="registrarVeterinario()">Registrar Datos</button>
+                    } @else {
+                        <button type="submit" class="btn btn-success" (click)="actualizarVeterinario()">Actualizar Datos</button>
+                    }
+                </div> -->
+                
+                
+            </form>
+        </div>
+    </div>
+</div>
+
